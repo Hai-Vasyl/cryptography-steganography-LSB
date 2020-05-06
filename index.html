@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lab4</title>
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Rajdhani&display=swap" rel="stylesheet">
+  <link href="fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <img src="imgs/circle1.svg" alt="" class="bgimg1 bgimg">
+    <img src="imgs/background-circle3.svg" alt="" class="bgimg2 bgimg">
+
+    <div class="navbar" id="navbar">
+      <a href="#" class="link" id="active_link">ENCODE</a>
+      <a href="#" class="link">DECODE</a>
+      <p class="author">Hai Vasyl</p>
+    </div>
+
+    <div class="encode code">
+      <div class="leftside">
+        <p>Message for encode</p>
+        <textarea name="name" rows="8" cols="80" placeholder="Input text..." id="textarea"></textarea>
+        <div class="container_imageencodefile">
+          <label for="open_imageEncode" class="label_imageencodeFile"><i class="fas fa-folder-open"></i>  IMAGE</label>
+          <input type="file" name="" value="" id="open_imageEncode">
+        </div>
+        <button type="button" name="button" class="btnEncode" id="btnEncode">ENCODE</button>
+      </div>
+
+      <div class="rightside">
+        <p class="preview_text">Image for encoding</p>
+        <div class="frameEncode frame">
+          <canvas id="canv1"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="decode  code">
+      <div class="leftside">
+        <p>Decoded message</p>
+        <p class="textareaDisabled" id="textareaDisabled"></p>
+        <div class="container_imagedecodefile">
+          <label for="open_imageDecode" class="label_imagedecodeFile"><i class="fas fa-folder-open"></i> IMAGE</label>
+          <input type="file" name="" value="" id="open_imageDecode">
+        </div>
+        <button type="button" name="button" class="btnDecode" id="btnDecode">DECODE</button>
+      </div>
+
+      <div class="rightside">
+        <p class="preview_text">Image for decoding</p>
+        <div class="frameDecode frame">
+          <canvas id="canv2"></canvas>
+          <div class="container">
+            <a id="downloadBtn" class="downloadBtn" download="myImage.jpg" href="" ><i class="fas fa-download"></i> IMAGE</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+</html>
